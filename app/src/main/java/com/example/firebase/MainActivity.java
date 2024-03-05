@@ -15,13 +15,14 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 
 public class MainActivity extends AppCompatActivity {
-    EditText edtemail,edpass;
+    TextInputLayout edtemail,edpass;
     Button btnLogin;
     TextView txtForgot;
 
@@ -50,8 +51,8 @@ public class MainActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email=edtemail.getText().toString().trim();
-                String pass=edpass.getText().toString().trim();
+                String email=edtemail.getEditText().getText().toString().trim();
+                String pass=edpass.getEditText().getText().toString().trim();
                 if (TextUtils.isEmpty(email) || TextUtils.isEmpty(pass)) {
                     Toast.makeText(getApplicationContext(), "Không được bỏ trống", Toast.LENGTH_SHORT).show();
                     return;
@@ -86,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
              startActivity(new Intent(MainActivity.this, Forgot.class));
-finish();
+            finish();
             }
         });
 

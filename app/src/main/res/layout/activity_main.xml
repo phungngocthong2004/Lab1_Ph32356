@@ -15,47 +15,54 @@
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
         android:src="@drawable/fpt"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Email:"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:layout_marginLeft="15dp"/>
-
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/ed_username"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:background="@drawable/thietke"
-        android:hint="Nhập Username: "
-        android:minHeight="48dp"
-        android:textColor="@color/black" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="PassWord:"
-        android:textSize="20sp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:layout_marginLeft="15dp"/>
+        android:layout_height="70dp"
+        android:hint="Email"
+        android:textColorHint="@color/black"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidthFocused="2dp"
+        android:layout_marginHorizontal="10dp"
+        app:startIconTint="@color/black"
+        app:endIconTint="@color/black"
+        app:endIconMode="clear_text">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:inputType="text"/>
 
-    <EditText
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/ed_passrord"
+        android:layout_marginHorizontal="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:hint="Nhập Password: "
-        android:inputType="textPassword"
-        android:background="@drawable/thietke"
-        android:minHeight="48dp"
-        android:textColor="@color/black" />
+        android:layout_height="70dp"
+        android:hint="Mật khẩu"
+        android:textColorHint="@color/black"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidthFocused="2dp"
+
+        app:startIconTint="@color/black"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        app:errorEnabled="true"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/black">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:inputType="textPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Đăng Nhập"
+        android:backgroundTint="@null"
         android:textColor="@color/black"
         android:background="@drawable/custombtn"
         android:layout_margin="15dp"

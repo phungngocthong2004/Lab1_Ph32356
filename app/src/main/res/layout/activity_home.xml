@@ -4,14 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
+    android:orientation="vertical"
+android:id="@+id/home"
     tools:context=".Home">
-    <Button
+
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Đăng Xuất"
+        android:text="Quản Lý Sinh Viên"
+        android:gravity="center"
+        android:textSize="35dp"
         android:textColor="@color/black"
-        android:background="@drawable/custombtn"
-        android:layout_margin="15dp"
-        android:id="@+id/btnDangXuat"/>
+        android:paddingTop="10dp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"/>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rccity"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="20dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatadd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_add_24"
+        android:layout_gravity="bottom|end"
+        android:backgroundTint="#FF9800"
+
+      android:layout_margin="30dp"
+
+    />
 </LinearLayout>
