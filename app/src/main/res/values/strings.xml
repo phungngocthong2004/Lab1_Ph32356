@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FireBase</string>
+    <string name="forgot_passwrord"><u>Forgot Passwrord?</u></string>
+    <string name="sign_up">Don\'t  have an account?<b>Sign Up</b></string>
+</resources>
